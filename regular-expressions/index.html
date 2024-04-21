@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style/output.css" rel="stylesheet">
+    <title>Tugas 3-Regular Expressions</title>
+</head>
+<body class="bg-purple-300 min-h-screen py-20 px-10">
+    <div class="w-full h-full max-w-screen mx-0">
+        <div class="flex justify-center">
+            <div class="flex-col">
+                <p class="text-black font-bold text-2xl text-center"> &#9733; Regular Expressions &#9733;</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap mt-10 px-5 gap-5">
+        <div class="w-[23rem]">
+            <label for="nama-lengkap" class="font-semibold text-black block leading-6">Nama Lengkap (Kapital di awal) </label>
+            <div class="mt-2">
+                <input type="text" id="inputNamaLengkap" name="namaLengkap" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Nama Lengkap">
+                <p id="validasiNamaLengkap" class="mt-1"></p>
+            </div>
+        </div>
+
+        <div class="w-[23rem]">
+            <label for="tanggal-lahir" class="font-semibold text-black block leading-6">Tanggal Lahir (YYYY-MM-DD) </label>
+            <div class="mt-2">
+                <input type="text" id="inputTanggalLahir" name="tanggalLahir" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Tanggal Lahir">
+                <p id="validasiTanggalLahir" class="mt-1"></p>
+            </div>
+        </div>
+
+        <div class="w-[23rem]">
+            <label for="nomor-telepon" class="font-semibold text-black block leading-6">Nomor Telepon</label>
+            <div class="mt-2">
+                <input type="text" id="inputNomorTelepon" name="nomorTelepon" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Nomor Telepon">
+                <p id="validasiNomorTelepon" class="mt-1"></p>
+            </div>
+        </div>
+
+        <div class="w-[23rem]">
+            <label for="email" class="font-semibold text-black block leading-6">E-mail</label>
+            <div class="mt-2">
+                <input type="text" id="inputEmail" name="email" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan E-mail">
+                <p id="validasiEmail" class="mt-1"></p>
+            </div>
+        </div>
+
+        <div class="w-[23rem]">
+            <label for="username-twitter" class="font-semibold text-black block leading-6">Username Twitter</label>
+            <div class="mt-2">
+                <input type="text" id="inputUnameTwitter" name="unameTwitter" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Username Twitter">
+                <p id="validasiUnameTwitter" class="mt-1"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let regexinputNamaLengkap = document.getElementById("inputNamaLengkap");
+        let namalengkapValidasi = document.getElementById("validasiNamaLengkap");
+
+        let regexinputTanggalLahir = document.getElementById("inputTanggalLahir");
+        let tanggallahirValidasi = document.getElementById("validasiTanggalLahir");
+
+        let regexinputNomorTelepon = document.getElementById("inputNomorTelepon");
+        let nomorTeleponValidasi = document.getElementById("validasiNomorTelepon");
+
+        let regexinputEmail = document.getElementById("inputEmail");
+        let emailValidasi = document.getElementById("validasiEmail");
+
+        let regexinputUnameTwitter = document.getElementById("inputUnameTwitter");
+        let unameTwitterValidasi = document.getElementById("validasiUnameTwitter");
+
+
+        const REGEX_NAMALENGKAP = new RegExp("^[A-Z][a-z]*(?: [A-Z][a-z]*)*$");
+
+        const REGEX_TANGGALLAHIR = new RegExp("\\d{4}-\\d{2}-\\d{2}");
+
+        const REGEX_NOMORTELEPON = new RegExp("^\\+(?:[0-9] ?){6,14}[0-9]$");
+
+        const REGEX_EMAIL = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+
+        const REGEX_UNAMETWITTER = new RegExp("^[a-zA-Z][a-zA-Z0-9]{3,14}$");
+
+
+        regexinputNamaLengkap.addEventListener("input", () => {
+            handleInput(regexinputNamaLengkap, namalengkapValidasi, REGEX_NAMALENGKAP);
+        });
+
+        regexinputTanggalLahir.addEventListener("input", () => {
+            handleInput(regexinputTanggalLahir, tanggallahirValidasi, REGEX_TANGGALLAHIR);
+        });
+
+        regexinputNomorTelepon.addEventListener("input", () => {
+            handleInput(regexinputNomorTelepon, nomorTeleponValidasi, REGEX_NOMORTELEPON);
+        });
+
+        regexinputEmail.addEventListener("input", () => {
+            handleInput(regexinputEmail, emailValidasi, REGEX_EMAIL);
+        });
+
+        regexinputUnameTwitter.addEventListener("input", () => {
+            handleInput(regexinputUnameTwitter, unameTwitterValidasi, REGEX_UNAMETWITTER);
+        });
+
+        function handleInput(inputElement, validationElement, regex) {
+            if(inputElement.value === ""){
+                validationElement.classList.remove("text-black");
+                validationElement.innerHTML = "";
+            }else if(regex.test(inputElement.value)){
+                validationElement.classList.add("text-black");
+                validationElement.innerHTML = "Valid";
+            }else{
+                validationElement.classList.add("text-black");
+                validationElement.innerHTML = "Invalid";
+            }
+        }
+    </script>
+</body>
+</html>

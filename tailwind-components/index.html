@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampus Merdeka</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="../style/output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .menu {
+                display: none;
+            }
+            .menu.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="flex items-center justify-between bg-black px-28 py-2">
+        <div class="container mx-auto flex items-center justify-between">
+            <img src="images/logo.png" class="w-20 cursor-pointer" alt="">
+
+            <!-- Tombol Hamburger -->
+            <button id="menu-toggle" class="text-white md:hidden">
+                <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+    <!-- Daftar Navigasi -->
+    <ul class="menu hidden md:flex space-x-4 ml-auto">
+        <li><a href="#" class="text-white hover:underline">Beranda</a></li>
+        <li><a href="#" class="text-white hover:underline">Program</a></li>
+        <li><a href="#" class="text-white hover:underline">Butuh Bantuan?</a></li>
+        <li>
+            <a href="#" class="text-white hover:underline flex items-center border-2 border-white rounded-full px-3 py-1">
+                <span>Masuk ke Akun</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</nav>
+
+    <!-- Tampilan Daftar Navigasi pada Layar Kecil -->
+    <div id="mobile-menu" class="md:hidden bg-black text-white" style="display: none;">
+        <ul class="flex flex-col items-center py-4">
+            <li><a href="#" class="text-white hover:underline">Beranda</a></li>
+            <li><a href="#" class="text-white hover:underline">Program</a></li>
+            <li><a href="#" class="text-white hover:underline">Butuh Bantuan?</a></li>
+            <li><a href="#" class="text-white hover:underline">Masuk ke Akun</a></li>
+        </ul>
+    </div>
+
+    <section class="container mx-auto py-10 px-28">
+        <h1 class="text-3xl font-bold mb-6">Program Kampus Merdeka</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="images/kampus-mengajar.png" class="w-full h-40 object-cover object-center mb-4">
+                <h2 class="text-xl font-semibold mb-4">Kampus Mengajar</h2>
+                <p class="text-gray-600">Bantu peningkatan kualitas pendidikan dasar dengan terlibat langsung pada proses pengajaran di sekolah-sekolah yang berlokasi di seluruh daerah di Indonesia.</p>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+            </div>
+           
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="images/msib.png" class="w-full h-40 object-cover object-center mb-4">
+                <h2 class="text-xl font-semibold mb-4">Magang MSIB</h2>
+                <p class="text-gray-600">Dapatkan pengalaman dunia kerja secara langsung sebagai persiapan kariermu.</p>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="images/msib.png" class="w-full h-40 object-cover object-center mb-4">
+                <h2 class="text-xl font-semibold mb-4">Studi Independen</h2>
+                <p class="text-gray-600">Jalankan proyek penelitian dengan studi kasus nyata dari para pelaku industri ternama.</p>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="images/pmm.png" class="w-full h-40 object-cover object-center mb-4">
+                <h2 class="text-xl font-semibold mb-4">Pertukaran Mahasiswa Merdeka</h2>
+                <p class="text-gray-600">Program pertukaran mahasiswa dalam negeri  yang memberikan pengalaman langsung untuk lebih memaknai keberagaman budaya nusantara.</p>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="images/wirausaha-merdeka.png" class="w-full h-40 object-cover object-center mb-4">
+                <h2 class="text-xl font-semibold mb-4">Wirausaha Merdeka</h2>
+                <p class="text-gray-600">Ikuti program unggulan dari berbagai Perguruan Tinggi yang bertujuan untuk meningkatkan kemampuan wirausaha.</p>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="images/iisma.png" class="w-full h-40 object-cover object-center mb-4">
+                <h2 class="text-xl font-semibold mb-4">Indonesian International Student Mobility Awards</h2>
+                <p class="text-gray-600">Program pertukaran dengan universitas lain dari seluruh dunia untuk bertukar budaya.</p>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="images/praktisi-mengajar.png" class="w-full h-40 object-cover object-center mb-4">
+                <h2 class="text-xl font-semibold mb-4">Praktisi Mengajar</h2>
+                <p class="text-gray-600">Ruang kolaborasi antara Praktisi sebagai representasi industri dengan dosen Perguruan Tinggi dalam bentuk pengajaran mata kuliah agar mahasiswa lebih siap untuk masuk ke dunia kerja.</p>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+                <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-bold mb-6">Kegiatan Lainnya</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <img src="images/mandiri.png" class="w-full h-40 object-cover object-center mb-4">
+            <h2 class="text-xl font-semibold mb-4">Magang Mandiri</h2>
+            <p class="text-gray-600">Temukan pengalaman dunia kerja yang dikelola langsung oleh perusahaan tanpa ada batasan kuota dan jadwal yang lebih fleksibel.</p>
+            <a href="#" class="block font-semibold text-blue-600 mt-4">Tentang Program</a>
+             <a href="#" class="block font-semibold text-blue-600 mt-4">Syarat dan Ketentuan</a>
+        </div>  
+
+    </section>
+
+    <footer class="flex items-center justify-between bg-black text-white px-28 py-10">
+        <div class="container mx-auto py-8 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="images/kemendikbud.png" class="w-1/4 cursor-pointer" alt="">
+
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi (Diktiristek)</h4>
+                    <ul>
+                        <li><a href="#" class="hover:underline">marketing@kampusmerdeka.co</a></li> <br>
+                        <li><a href="#" class="hover:underline">Jl. Jenderal Sudirman, Senayan, Jakarta 10270</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Navigasi</h4>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Beranda</a></li> 
+                        <li><a href="#" class="hover:underline">Tentang Kami</a></li> 
+                        <li><a href="#" class="hover:underline">Berita</a></li> 
+                        <li><a href="#" class="hover:underline">Pengumuman</a></li> 
+                        <li><a href="#" class="hover:underline">FAQ</a></li> 
+                        <li><a href="#" class="hover:underline">Program</a></li> 
+                        <li><a href="#" class="hover:underline">Daftar</a></li> 
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Tautan Eksternal</h4>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Mitra Kampus Merdeka</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6">
+                <p class="text-sm text-gray-500">&copy; Hak Cipta 2022 Kementerian Pendidikan dan Kebudayaan RI <br> Foto oleh ITS, ITERA, and UI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle'); // Menggunakan ID sebagai selector
+            const menu = document.querySelector('.menu');
+    
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
