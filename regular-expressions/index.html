@@ -2,60 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../style/output.css" rel="stylesheet">
-    <title>Tugas 3-Regular Expressions</title>
+    <title>Tugas 1 PIMK Aliya Afifa</title>
+    <style>
+        body {
+            background-color: #efe8b4;
+        }
+        h2 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        fieldset {
+            background-color: rgba(255, 255, 255, 0.878);
+            border: solid black;
+        }
+        .legend {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+        #image {
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+        #text {
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-purple-300 min-h-screen py-20 px-10">
-    <div class="w-full h-full max-w-screen mx-0">
-        <div class="flex justify-center">
-            <div class="flex-col">
-                <p class="text-black font-bold text-2xl text-center"> &#9733; Regular Expressions &#9733;</p>
+<body>
+    <h2>NEO CULTURE INSTITUTE OF TECHNOLOGY</h2>
+    <form method="post" action="#">
+        <fieldset>
+            <legend class="legend"><b>&#9733; REGULAR EXPRESSIONS &#9733;</b></legend>
+            <div class="w-[23rem]">
+                <label for="nama-lengkap">Nama Lengkap (Kapital di awal) </label>
+                <div class="mt-2">
+                    <input type="text" id="inputNamaLengkap" name="namaLengkap" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Nama Lengkap">
+                    <p id="validasiNamaLengkap" class="mt-1"></p>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="flex flex-wrap mt-10 px-5 gap-5">
-        <div class="w-[23rem]">
-            <label for="nama-lengkap" class="font-semibold text-black block leading-6">Nama Lengkap (Kapital di awal) </label>
-            <div class="mt-2">
-                <input type="text" id="inputNamaLengkap" name="namaLengkap" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Nama Lengkap">
-                <p id="validasiNamaLengkap" class="mt-1"></p>
-            </div>
-        </div>
 
-        <div class="w-[23rem]">
-            <label for="tanggal-lahir" class="font-semibold text-black block leading-6">Tanggal Lahir (YYYY-MM-DD) </label>
-            <div class="mt-2">
-                <input type="text" id="inputTanggalLahir" name="tanggalLahir" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Tanggal Lahir">
-                <p id="validasiTanggalLahir" class="mt-1"></p>
+            <div class="w-[23rem]">
+                <label for="tanggal-lahir" class="font-semibold text-black block leading-6">Tanggal Lahir (YYYY-MM-DD) </label>
+                <div class="mt-2">
+                    <input type="text" id="inputTanggalLahir" name="tanggalLahir" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Tanggal Lahir">
+                    <p id="validasiTanggalLahir" class="mt-1"></p>
+                </div>
             </div>
-        </div>
 
-        <div class="w-[23rem]">
-            <label for="nomor-telepon" class="font-semibold text-black block leading-6">Nomor Telepon</label>
-            <div class="mt-2">
-                <input type="text" id="inputNomorTelepon" name="nomorTelepon" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Nomor Telepon">
-                <p id="validasiNomorTelepon" class="mt-1"></p>
+            <div class="w-[23rem]">
+                <label for="nomor-telepon" class="font-semibold text-black block leading-6">Nomor Telepon</label>
+                <div class="mt-2">
+                    <input type="text" id="inputNomorTelepon" name="nomorTelepon" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Nomor Telepon">
+                    <p id="validasiNomorTelepon" class="mt-1"></p>
+                </div>
             </div>
-        </div>
-
-        <div class="w-[23rem]">
-            <label for="email" class="font-semibold text-black block leading-6">E-mail</label>
-            <div class="mt-2">
-                <input type="text" id="inputEmail" name="email" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan E-mail">
-                <p id="validasiEmail" class="mt-1"></p>
+    
+            <div class="w-[23rem]">
+                <label for="email" class="font-semibold text-black block leading-6">E-mail</label>
+                <div class="mt-2">
+                    <input type="text" id="inputEmail" name="email" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan E-mail">
+                    <p id="validasiEmail" class="mt-1"></p>
+                </div>
             </div>
-        </div>
+    
+            <div class="w-[23rem]">
+                <label for="username-twitter" class="font-semibold text-black block leading-6">Username Twitter</label>
+                <div class="mt-2">
+                    <input type="text" id="inputUnameTwitter" name="unameTwitter" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Username Twitter">
+                    <p id="validasiUnameTwitter" class="mt-1"></p>
+                </div>
+            </div>    
+        </fieldset>
+    </form>
 
-        <div class="w-[23rem]">
-            <label for="username-twitter" class="font-semibold text-black block leading-6">Username Twitter</label>
-            <div class="mt-2">
-                <input type="text" id="inputUnameTwitter" name="unameTwitter" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="Masukkan Username Twitter">
-                <p id="validasiUnameTwitter" class="mt-1"></p>
-            </div>
-        </div>
-
-    </div>
 
     <script>
         let regexinputNamaLengkap = document.getElementById("inputNamaLengkap");
